@@ -14,8 +14,9 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^2.23.7",
+    "gatsby": "^4.0.0",
     "gatsby-plugin-netlify-cms": "^6.10.0",
+    "gatsby-plugin-sass": "^5.10.2",
     "netlify-cms-app": "^2.15.69",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
