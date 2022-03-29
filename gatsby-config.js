@@ -5,6 +5,8 @@ module.exports = {
 
   plugins: [
   'gatsby-plugin-netlify-cms',
+'gatsby-transformer-remark',
+
 
     {
       resolve: `gatsby-plugin-sass`,
@@ -16,7 +18,16 @@ module.exports = {
          },
        },
      },
-    }
+    },
+
+{
+ resolve: 'gatsby-source-filesystem',
+ options: {
+ name: 'blog',
+ path: 'src/blog'
+ }
+ }
+
 
   ]
 };
