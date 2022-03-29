@@ -5,7 +5,6 @@ module.exports = {
 
   plugins: [
   'gatsby-plugin-netlify-cms',
-'gatsby-transformer-remark',
 
 
     {
@@ -26,7 +25,9 @@ module.exports = {
  name: 'blog',
  path: 'src/blog'
  }
- }
+ },
+
+'gatsby-transformer-remark'
 
 
   ]
