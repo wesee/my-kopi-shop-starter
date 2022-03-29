@@ -15,6 +15,9 @@ const data = useStaticQuery(graphql`
  title
  date(formatString: "MMMM D, YYYY")
  }
+ fields {
+  slug
+ }
  excerpt
  }
  }
@@ -27,6 +30,7 @@ const data = useStaticQuery(graphql`
  {data.allMarkdownRemark.edges.map(entry => (
  <BlogEntry
  key={entry.node.id}
+ slug={entry.node.fields.slug}
  title={entry.node.frontmatter.title}
  date={entry.node.frontmatter.date}
  excerpt={entry.node.excerpt} />
