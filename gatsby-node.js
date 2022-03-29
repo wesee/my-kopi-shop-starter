@@ -23,6 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
  allMarkdownRemark {
  edges {
  node {
+ fileAbsolutePath
  frontmatter {
  contentKey
  }
@@ -65,6 +66,18 @@ context: {
  });
  }
 
+
+
+const pageData = result.data.allMarkdownRemark.edges.filter(({ node }) => !node.frontmatter.contentKey);
+pageData.forEach(({ node }) => {
+const pageName = node.fileAbsolutePath.match(/(\w+).md$/)[1];
+let pathName = pageName === 'index' ? '/' : pageName;
+
+createPage({
+path: pathName,
+component: path.resolve(`./src/templates/${pageName}.js`)
+ });
+ });
 
  };
 
