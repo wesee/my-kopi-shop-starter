@@ -1,5 +1,5 @@
 
-mport CMS from 'netlify-cms-app';
+import CMS from 'netlify-cms-app';
 
 import MenuPreview from './MenuPreview';
 
