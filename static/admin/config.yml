@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: proxy
+  proxy_url: http://192.168.2.194:8081/api/v1
   branch: master
 
 media_folder: static/img
@@ -14,6 +15,7 @@ collections:
     fields:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Publish Date", name: "date", widget: "datetime" }
+    - { name: "contentKey", widget: "hidden", default: "blog" }
     - { label: "Body", name: "body", widget: "markdown" }
   - name: "pages"
     label: "Pages"
